@@ -1,0 +1,55 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "www/config.xml": {
+                "parents": {
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"com.blackberry.utils\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"com.blackberry.connection\" value=\"com.blackberry.connection\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"com.blackberry.invoke\" value=\"com.blackberry.invoke\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"com.blackberry.invoke.card\" value=\"com.blackberry.invoke.card\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"com.blackberry.ui.dialog\" value=\"com.blackberry.ui.dialog\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.blackberry.connection": {
+            "PACKAGE_NAME": "NeredeBuOtobus"
+        },
+        "com.blackberry.invoke": {
+            "PACKAGE_NAME": "NeredeBuOtobus"
+        },
+        "com.blackberry.invoke.card": {
+            "PACKAGE_NAME": "NeredeBuOtobus"
+        },
+        "com.blackberry.ui.dialog": {
+            "PACKAGE_NAME": "NeredeBuOtobus"
+        }
+    },
+    "dependent_plugins": {
+        "com.blackberry.utils": {
+            "PACKAGE_NAME": "NeredeBuOtobus"
+        }
+    }
+}
