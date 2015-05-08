@@ -4,10 +4,14 @@ var Timer = {
 
     counter: null,
 
+    counterFunc: function () {
+        App.getBusInfo();
+        App.showBusInfo();
+    },
     start: function () {
         this.working = true;
         this.stop();
-        this.counter = setInterval(App.getBusInfo, 30000); //App.getBusInfo() functionını 30saniyede bir çalıştır
+        this.counter = setInterval(Timer.counterFunc, 30000); //App.getBusInfo() functionını 30saniyede bir çalıştır
     },
 
     stop: function () {

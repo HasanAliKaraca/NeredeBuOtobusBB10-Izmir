@@ -33,7 +33,7 @@ var App = {
         return dataObject;
     },
     values: null,
-    url:'',
+    url: '',
     getBusInfo: function () {
 
         var dataObject = App.getValues();
@@ -69,7 +69,7 @@ var App = {
                 App.alert(message, title);
             }
         }
-        
+
         var date = new Date();
         var hour = date.getHours()
         if (hour < 10) hour = "0" + hour;
@@ -89,8 +89,17 @@ var App = {
     showBusInfo: function (data) {
 
         var url = App.url;
-        $("#durakImg").attr("data-bb-img", url);
-        $("#durakImg").attr("src", url);
+
+        var $durakImg = $("#durakImg");
+        //$durakImg.attr("data-bb-img", url);
+        $durakImg.attr("src", url);
+
+        if (!url) {
+            $durakImg.hide();
+        }
+        else {
+            $durakImg.show();
+        }
 
 
         var date = new Date();
